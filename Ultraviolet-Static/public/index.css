@@ -1,0 +1,9 @@
+.logs {
+  float: right;
+  resize: none;
+  height: 20vh;
+  width: 30vw;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
