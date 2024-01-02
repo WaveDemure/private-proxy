@@ -36,6 +36,10 @@ form.addEventListener("submit", async (event) => {
   location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
 
+var bookMarkJson = [
+  
+]
+
 document.getElementById("add-mark").addEventListener("click", function () {
   var B_Num = prompt("Bookmark name");
   var B_Link = prompt("Bookmark link");
@@ -67,5 +71,5 @@ document.getElementById("add-mark").addEventListener("click", function () {
   });
   bookDiv.appendChild(bookButton)
 
-  
+  bookMarkJson.push(convertedJson)
 })
