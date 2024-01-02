@@ -66,4 +66,6 @@ document.getElementById("add-mark").addEventListener("click", function () {
     location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
   });
   bookDiv.appendChild(bookButton)
+
+  
 })
