@@ -54,23 +54,16 @@ document.getElementById("add-mark").addEventListener("click", function () {
   bookButton.id = B_Link
   bookButton.addEventListener("click", async (event) => {
     event.preventDefault();
-  
+
     try {
       await registerSW();
     } catch (err) {
       document.write("Failed to register Service worker" + err.toString() + " | <button onclick='location.reload()'>Return</button>");
       throw err;
     }
-    if (bookButton.id.includes("https://")) {
-      const url = search(bookButton.id);
-      console.log(url)
-      location.href = __uv$config.encodeUrl(url);
-    } else {
-      const url = search(address.value, searchEngine.value);
-      console.log(url)
-      location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
-    }
-
+  
+    const url = search(bookButton.id, searchEngine.value);
+    location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
   });
   bookDiv.appendChild(bookButton)
 })
