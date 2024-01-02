@@ -72,4 +72,5 @@ document.getElementById("add-mark").addEventListener("click", function () {
   bookDiv.appendChild(bookButton)
 
   bookMarkJson.push(convertedJson)
+  console.log(bookMarkJson)
 })
