@@ -62,7 +62,7 @@ document.getElementById("add-mark").addEventListener("click", function () {
       throw err;
     }
     if (bookButton.id.includes("https://")) {
-      const url = search(address.value);
+      const url = search(bookButton.id);
       console.log(url)
       location.href = __uv$config.encodeUrl(url);
     } else {
