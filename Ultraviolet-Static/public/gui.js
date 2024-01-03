@@ -20,8 +20,6 @@ const error = document.getElementById("uv-error");
  */
 const errorCode = document.getElementById("uv-error-code");
 
-var logID = document.getElementById("logs")
-
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -35,42 +33,3 @@ form.addEventListener("submit", async (event) => {
   const url = search(address.value, searchEngine.value);
   document.getElementById("output").src = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
-
-var bookMarkJson = [
-  
-]
-
-document.getElementById("add-mark").addEventListener("click", function () {
-  var B_Num = prompt("Bookmark name");
-  var B_Link = prompt("Bookmark link");
-
-  var convertedJson = {
-    "name": B_Num,
-    "link": B_Link
-  }
-
-  var bookDiv = document.createElement("div");
-  document.getElementById("mark-contanier").appendChild(bookDiv);
-
-  var bookButton = document.createElement("a");
-  bookButton.innerHTML = convertedJson.name;
-  bookButton.classList.add("bookButton")
-  bookButton.id = B_Link
-  bookButton.addEventListener("click", async (event) => {
-    event.preventDefault();
-
-    try {
-      await registerSW();
-    } catch (err) {
-      document.write("Failed to register Service worker" + err.toString() + " | <button onclick='location.reload()'>Return</button>");
-      throw err;
-    }
-  
-    const url = search(bookButton.id, searchEngine.value);
-    location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
-  });
-  bookDiv.appendChild(bookButton)
-
-  bookMarkJson.push(convertedJson)
-  console.log(bookMarkJson)
-})
