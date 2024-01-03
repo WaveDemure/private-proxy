@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Browser</title>
+    <meta name="googlebot" content="index, follow, snippet" />
+    <link rel="stylesheet" href="gui.css">
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <div class="tab-bar">
+        <div class="top-section">
+            <h1 class="tab-title">Shadow Browser</h1>
+            <form id="uv-form" class="flex-center">
+                <input id="engine" value="https://www.google.com/search?q=%s" type="hidden" />
+                <input id="address" type="text" placeholder="Search" />
+            </form>
+        </div>
+        <div class="tab-container">
+            <a onclick="alert()">test</a>
+        </div>
+        <div class="bottom-section">
+            <h4 class="tab-title"></h4>
+        </div>
+    </div>
+    <div class="frame">
+        <iframe id="output"></iframe>
+    </div>
+</body>
+
+</html>
