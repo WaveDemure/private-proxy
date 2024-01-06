@@ -28,7 +28,7 @@ form.addEventListener("submit", async (event) => {
   try {
     await registerSW();
   } catch (err) {
-    document.write("Failed to register Service worker" + err.toString() + " | <button onclick='location.reload()'>Return</button>");
+      document.write("Failed to register Service worker" + err.toString() + " | <button onclick='location.reload()'>Return</button>")
     throw err;
   }
 
@@ -62,12 +62,12 @@ document.getElementById("add-mark").addEventListener("click", function () {
     try {
       await registerSW();
     } catch (err) {
-      document.write("Failed to register Service worker" + err.toString() + " | <button onclick='location.reload()'>Return</button>");
+      document.getElementById('frame').contentWindow.document.write("Failed to register Service worker" + err.toString() + " | <button onclick='location.reload()'>Return</button>");
       throw err;
     }
   
     const url = search(bookButton.id, searchEngine.value);
-    location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+    document.getElementById("frame").src = __uv$config.prefix + __uv$config.encodeUrl(url);
   });
   bookDiv.appendChild(bookButton)
 

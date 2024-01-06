@@ -10,14 +10,16 @@
     <script src="uv/uv.config.js" defer></script>
     <script src="register-sw.js" defer></script>
     <script src="search.js" defer></script>
-    <script src="gui.js" defer></script>
+    <script src="index.js" defer></script>
   </head>
 
   <body>
-    <form id="uv-form" class="flex-center">
-      <input id="engine" value="https://www.google.com/search?q=%s" type="hidden" />
-      <input id="address" type="text" placeholder="Search" />
-    </form>
+    <div class="top">
+      <form id="uv-form" class="flex-center">
+        <input id="engine" value="https://www.google.com/search?q=%s" type="hidden" />
+        <input id="address" type="text" placeholder="Search" />
+      </form>
+    </div>
     <div class="desc left-margin">
       <p id="uv-error"></p>
       <pre id="uv-error-code"></pre>
@@ -27,5 +29,9 @@
       <a id="add-mark">Add +</a>
       <div class="mark-contanier" id="mark-contanier"></div>
     </div>
+    <div class="frame">
+      <iframe src="https://example.com" id="frame" frameborder="0"></iframe>
+    </div>
+    
   </body>
 </html>

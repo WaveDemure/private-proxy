@@ -18,7 +18,7 @@ body {
 
 .mark-contanier {
   background-color: gray;
-  height: 70vh;
+  height: 40vh;
   width: 25vw;
   margin-top: 15px;
 }
@@ -44,3 +44,29 @@ body {
   display: block;
 }
 
+.frame iframe {
+  position: absolute;
+  left: 27vw;
+  top: 7.5vh;
+  width: 70vw;
+  height: 90%;
+}
+
+.top {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 5vh;
+  width: 100vw;
+  background-color: rgb(19, 19, 19);
+}
+
+#address {
+  border: 3px solid rgba(0, 0, 0, 0.548);
+  background-color: rgb(27, 27, 27);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  color: white;
+}
