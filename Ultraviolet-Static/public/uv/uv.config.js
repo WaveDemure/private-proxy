@@ -1,7 +1,7 @@
 // This file overwrites the stock UV config.js
 
 self.__uv$config = {
-  prefix: "/media/photos/",
+  prefix: "/uv/service/",
   bare: "/bare/",
   encodeUrl: Ultraviolet.codec.xor.encode,
   decodeUrl: Ultraviolet.codec.xor.decode,
