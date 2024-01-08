@@ -33,7 +33,7 @@ form.addEventListener("submit", async (event) => {
   }
 
   const url = search(address.value, searchEngine.value);
-  document.getElementById("frame").src = __uv$config.prefix + __uv$config.encodeUrl(url);
+  location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
 
 var bookMarkJson = [];
@@ -120,12 +120,6 @@ document.getElementById("add-mark").addEventListener("click", function () {
   bookmarkContainer.classList.add("bookmark-container");
   document.getElementById("mark-contanier").appendChild(bookmarkContainer);
 
-  var faviconImg = document.createElement("img");
-  faviconImg.src = `https://s2.googleusercontent.com/s2/favicons?domain_url=${B_Link}`;
-  faviconImg.alt = "Favicon";
-  faviconImg.width = 16;
-  faviconImg.height = 16; 
-
   var bookButton = document.createElement("a");
   bookButton.innerHTML = convertedJson.name;
   bookButton.classList.add("bookButton");
@@ -144,7 +138,6 @@ document.getElementById("add-mark").addEventListener("click", function () {
     document.getElementById("frame").src = __uv$config.prefix + __uv$config.encodeUrl(url);
   });
   bookmarkContainer.appendChild(bookButton);
-  bookButton.appendChild(faviconImg);
   bookMarkJson.push(convertedJson);
 
   if (isLocalFile()) {
